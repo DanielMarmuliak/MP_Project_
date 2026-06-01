@@ -1,0 +1,23 @@
+	display.h, display.cpp, 
+CHYBA GOTOWY, cpp nic nie ma bo nie zawiera implementacji, h ma klasę abstrakcyjną z której będziemy dziedziczyć
+
+	graphicalDisplay.h, graphicalDisplay.cpp, 
+
+	textDisplay.h, textDisplay.cpp, 
+cpp - dodać sprawdzanie wyjątków/walidację, h - CHYBA GOTOWY
+
+	shape.h, shape.cpp, 
+
+	circle.h, circle.cpp, 
+
+	triangle.h, triangle.cpp, 
+
+	parallelogram.h, parallelogram.cpp,
+
+	complexShape.h, complexShape.cpp, 
+
+	myexceptions.h, myexceptions.cpp 
+
+	main.cpp
+CHYBA GOTOWY, on ma po prostu uruchomić to wszystko, na koniec trzeba zrobić tylko jakiś swój przykład i sprawdzić czy działa
+	
