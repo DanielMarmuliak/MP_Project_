@@ -3,7 +3,7 @@
 
 void Circle::validateRadius(int r) const{
     if(r <= 0)
-        throw ValidationException("Error: Circle radius must be positive");
+        throw ValidationException("Circle radius must be positive");
 }
 
 Circle::Circle(Display* w, int r)

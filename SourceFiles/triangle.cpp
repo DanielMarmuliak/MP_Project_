@@ -4,7 +4,7 @@
 
 void Triangle::validateVectors(int a1, int a2, int b1, int b2) const{
     if(a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0)
-        throw ValidationException("Error. a1, a2 and b1 must be positive, and b2 must be negative");
+        throw ValidationException("In triangle a1, a2 and b1 must be positive, and b2 must be negative");
 }
 
 Triangle::Triangle(Display* w, int a1, int a2, int b1, int b2)
