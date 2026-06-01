@@ -5,12 +5,12 @@
 
 void TextDisplay::validateCircle(int r) const{
 	if(r <= 0)
-		throw MyExceptions("Error: Radius must be positive");
+		throw ValidationException("Error: Radius must be positive");
 }
 
 void TextDisplay::validateVectors(int a1, int a2, int b1, int b2) const{
 	if(a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0)
-		throw MyExceptions("Error: a1, a2, b1 must be positive, and b2 must be negative");
+		throw ValidationException("Error: a1, a2, b1 must be positive, and b2 must be negative");
 }
 
 
