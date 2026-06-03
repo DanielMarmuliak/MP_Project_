@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "graphicalDisplay.h"
 #include "myexceptions.h"
 #include "textDisplay.h"
 #include "circle.h"
@@ -58,7 +59,7 @@
 int main() {
 	try {
         // Tworzymy sposob wyswietlania
-        Display* textDisplay = new TextDisplay();
+        Display* textDisplay = new GraphicalDisplay();
 
         // Tworzymy ksztalty
         Shape* triangle = new Triangle(textDisplay, 3, 2, 2, -2);
