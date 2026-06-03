@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef SHAPE_H
+#define SHAPE_H
 
 #include "display.h"
 
@@ -10,8 +10,6 @@ protected:
     // To jest wskaznik na biblioteke wyswietlajaca. Dzieki temu kazdy ksztalt wie, jak ma sie narysowac
     Display* w;
 
-    //Sprawdza, czy wskaznik na Display jest poprawny 
-    void validateDisplay(Display* display);
 public:
     Shape(Display* w);
 
@@ -24,3 +22,5 @@ public:
     // Zmienia sposob wyswietlania ksztaltu
     void changeDisplay(Display* newDisplay);
 };
+
+#endif

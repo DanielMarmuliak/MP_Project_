@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PARALLELOGRAM_H
+#define PARALLELOGRAM_H
 
 
 #include "shape.h"
@@ -18,3 +19,5 @@ public:
     //rysuje rownoleglobok za pomoca wybranego wyswietlania
     void draw() override;
 };
+
+#endif

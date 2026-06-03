@@ -1,20 +1,16 @@
-#include "circle.h"
-#include "myexceptions.h"
+#include "../Headers/circle.h"
+#include "../Headers/myexceptions.h"
 
-void Circle::validateRadius(int r) const{
-    if(r <= 0)
-        throw ValidationException("Circle radius must be positive");
-}
 
-Circle::Circle(Display* w, int r)
- :Shape(w){
-    validateRadius(r);
+
+Circle::Circle(Display* w, int r):Shape(w){
+    Validation::validateRadius(r);
     this->r = r;
 }
 
 void Circle::draw(){
-    validateDisplay(w);
-    validateRadius(r);
+    Validation::validateDisplay(w);
+    Validation::validateRadius(r);
     
     w->drawCircle(r);
 }

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TRIANGLE_H
+#define TRIANGLE_H
 
 #include "shape.h"
 
@@ -9,11 +10,12 @@ private:
     int b1;
     int b2;
 
-    // sprawdza, czy wartosci wektorow sa poprawne 
-    void validateVectors(int a1, int a2, int b1, int b2) const;
+
 public:
     Triangle(Display* w, int a1, int a2, int b1, int b2);
 
     //rysuje trojkat za pomoca wybranego wyswietlania
     void draw() override;
 };
+
+#endif

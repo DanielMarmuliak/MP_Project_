@@ -1,17 +1,12 @@
-#include "shape.h"
-#include "myexceptions.h"
-
-void Shape::validateDisplay(Display* display){
-    if(display == nullptr)
-        throw DisplayException("Error: Display pointer cannot be null");
-}
+#include "../Headers/shape.h"
+#include "../Headers/myexceptions.h"
 
 Shape::Shape(Display* w){
-    validateDisplay(w);
+    Validation::validateDisplay(w);
     this->w = w;
 }
 
 void Shape::changeDisplay(Display* newDisplay){
-    validateDisplay(newDisplay);
+    Validation::validateDisplay(newDisplay);
     w = newDisplay;
 }
