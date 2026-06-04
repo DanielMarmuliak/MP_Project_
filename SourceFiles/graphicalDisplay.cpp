@@ -23,6 +23,10 @@ void GraphicalDisplay::drawLine(int xmin,int xmax, char letter) const {
     std::cout << std::endl;
 }
 
+double linearInterpolation(int x0, int y0, int x1, int y1, int yPos) {
+    return x0 + static_cast<double>(yPos-y0)*(x1-x0)/(y1-y0);
+}
+
 //funkcja wyznacza miejsca przecięć skanowanego wiersza (yPos) z krawędziami naszej figury
 void GraphicalDisplay::figureLimits(int x0, int y0, int x1, int y1, int yPos, std::vector<double>& limit) {
     //Sytuacja w której wierzchołki znajdują się w pionowej linii
@@ -35,7 +39,6 @@ void GraphicalDisplay::figureLimits(int x0, int y0, int x1, int y1, int yPos, st
         return;
     }
 
-
     int yMin = std::min(y0,y1);
     int yMax = std::max(y0,y1);
     //Sytuacja w której badamy poza zakresem
@@ -43,8 +46,7 @@ void GraphicalDisplay::figureLimits(int x0, int y0, int x1, int y1, int yPos, st
         return;
 
     //Jeśeli poprzednie opcje się nie sprawdziły to wykorzystujemy interpolację liniową do obliczenia przecięć.
-    double x = x0+ static_cast<double>(yPos-y0)*(x1-x0)/(y1-y0);
-    limit.push_back(x);
+    limit.push_back(linearInterpolation(x0,y0,x1,y1,yPos));
 
 }
 
