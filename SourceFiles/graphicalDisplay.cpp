@@ -83,7 +83,7 @@ void GraphicalDisplay::getDrawingLocation(int yPos, std::vector<std::pair<int,in
     xMin = static_cast<int>(ceil(xMin));
     xMax = static_cast<int>(floor(xMax));
 
-    GraphicalDisplay::drawLine(xMin,xMax,letter);
+    drawLine(xMin,xMax,letter);
 }
 
 void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
@@ -107,6 +107,31 @@ void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
 
 void GraphicalDisplay::drawCircle(int r){
     Validation::validateRadius(r);
+
+    //Współrzędne środka koła
+    int cx{r},cy{r};
+
+    //Przechodzimy przez każdy wiersz, czyli od wiersza 0 do końca średnicy (2r)
+    for (int y=0;y<=2*r;y++) {
+        int xmin = 2*r;
+        int xmax = 0;
+
+        //Przechodzimy przez każdą kolumnę
+        for (int x=0;x<=2*r;x++) {
+            //odległość w poziomie od środka
+            int dx = x - cx;
+            //odległość w pionie od środka
+            int dy = y - cy;
+
+            //Wzór na to czy znajdujemy się w kole
+            if (dx*dx + dy*dy <= r*r) {
+                xmin = std::min(xmin,x);
+                xmax = std::max(xmax,x);
+            }
+        }
+
+        drawLine(xmin,xmax,'c');
+    }
 };
 
 void GraphicalDisplay::drawParallelogram(int a1, int a2, int b1, int b2) {
