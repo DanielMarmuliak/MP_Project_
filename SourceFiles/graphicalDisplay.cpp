@@ -83,7 +83,7 @@ void GraphicalDisplay::getDrawingLocation(int yPos, std::vector<std::pair<int,in
     xMin = static_cast<int>(ceil(xMin));
     xMax = static_cast<int>(floor(xMax));
 
-    GraphicalDisplay::drawLine(xMin,xMax,'t');
+    GraphicalDisplay::drawLine(xMin,xMax,letter);
 }
 
 void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
@@ -111,4 +111,18 @@ void GraphicalDisplay::drawCircle(int r){
 
 void GraphicalDisplay::drawParallelogram(int a1, int a2, int b1, int b2) {
     Validation::validateVectors(a1, a2, b1, b2);
+
+    std::vector<std::pair<int,int>> vertices = {{0,0},{a1,a2},{a1+b1,a2+b2},{b1,b2}};
+
+    //Tutaj taka sama sytuacja jak przy trójkącie
+    int ymin{0}, ymax{0};
+
+    for (auto &v : vertices) {
+        ymin = std::min(ymin,v.second);
+        ymax = std::max(ymax,v.second);
+    }
+
+    for (int y = ymax; y>=ymin; y--) {
+        getDrawingLocation(y, vertices, 'p');
+    }
 }
