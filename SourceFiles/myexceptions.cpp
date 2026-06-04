@@ -31,5 +31,11 @@ void Validation::validateRadius(int r){
   throw ValidationException("Circle radius must be positive");
 }
 
+void Validation::validateShape(Shape* shape) {
+ if(shape == nullptr) {
+  throw ValidationException("Error: Shape pointer cannot be null");
+ }
+}
+
 
 
