@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include <string>
 
+#include "shape.h"
+
 class Display;
 
 // Klasa odpowiedzialna za obsługę wyjątków w projekcie
@@ -36,6 +38,7 @@ public:
     static void validateVectors(int a1, int a2, int b1, int b2);
     static void validateDisplay(Display* display);
     static void validateRadius(int r);
+    static void validateShape(Shape* shape);
 };
 
 #endif //MYEXCEPTIONS_H
