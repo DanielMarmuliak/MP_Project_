@@ -4,6 +4,16 @@
 #include "display.h"
 #include<vector>
 
+/*The function calculates the linear interpolation for two points in the tested yPos
+ * @param x0 - x coordinate for the first vertex
+ * @param y0 - y coordinate for the first vertex
+ * @param x1 - x coordinate for the second vertex
+ * @param y1 - y coordinate for the second vertex
+ * @param yPos - current row
+ * @returns value of linear interpolation
+ */
+double linearInterpolation(int x0, int y0, int x1, int y1, int yPos);
+
 class GraphicalDisplay : public Display {
 private:
     void drawLine(int xmin, int xmax, char letter) const;
