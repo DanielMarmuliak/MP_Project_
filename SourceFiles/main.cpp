@@ -1,14 +1,14 @@
 #include <iostream>
 
-#include "graphicalDisplay.h"
-#include "myexceptions.h"
-#include "textDisplay.h"
-#include "circle.h"
-#include "triangle.h"
-#include "parallelogram.h"
-#include "complexShape.h"
-#include "display.h"
-#include "shape.h"
+#include "../Headers/graphicalDisplay.h"
+#include "../Headers/myexceptions.h"
+#include "../Headers/textDisplay.h"
+#include "../Headers/circle.h"
+#include "../Headers/triangle.h"
+#include "../Headers/parallelogram.h"
+#include "../Headers/complexShape.h"
+#include "../Headers/display.h"
+#include "../Headers/shape.h"
 
 
 // Gotowa testowa funkcja z pliku pdf

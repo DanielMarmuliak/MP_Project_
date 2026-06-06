@@ -1,9 +1,9 @@
-#include "complexShape.h"
+#include "../Headers/complexShape.h"
 
 #include <iostream>
 #include <ostream>
 
-#include "myexceptions.h"
+#include "../Headers/myexceptions.h"
 
 //Konstruktor złożonej figury
 ComplexShape::ComplexShape(Display *w): Shape(w), shapesCount(0){

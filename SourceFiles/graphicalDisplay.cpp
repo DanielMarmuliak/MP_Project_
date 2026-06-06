@@ -1,11 +1,11 @@
-#include "graphicalDisplay.h"
+#include "../Headers/graphicalDisplay.h"
 
-#include<algorithm>
-#include<iostream>
-#include<cmath>
+#include <algorithm>
+#include <iostream>
+#include <cmath>
 
-#include "myexceptions.h"
-#include "triangle.h"
+#include "../Headers/myexceptions.h"
+#include "../Headers/triangle.h"
 
 //Konstruktor domyślny
 GraphicalDisplay::GraphicalDisplay() {}
