@@ -1,5 +1,5 @@
 #include "../Headers/textDisplay.h"
-#include "../Headers/myexceptions.h" //TRZEBA PÓŹNIEJ DODAĆ TE WYJĄTKI
+#include "../Headers/myexceptions.h" 
 
 #include <iostream>
 

@@ -12,7 +12,7 @@ GraphicalDisplay::GraphicalDisplay() {}
 
 void GraphicalDisplay::drawLine(int xmin,int xmax, char letter) const {
     //Uzupełnianie spacji do pierwszego wystąpienia krawędzi figury
-    for (int x=0;x<xmin;x++) {
+    for (int x=0; x < xmin; x++) {
         std::cout<<" ";
     }
 

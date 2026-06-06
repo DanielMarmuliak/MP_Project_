@@ -4,22 +4,41 @@
 #include "display.h"
 
 
-// Klasa bazowa dla wszystkich ksztaltow 
+/*
+ * Klasa bazowa dla wszystkich ksztaltow
+ */
 class Shape{
 protected:
     // To jest wskaznik na biblioteke wyswietlajaca. Dzieki temu kazdy ksztalt wie, jak ma sie narysowac
     Display* w;
 
 public:
+    /*
+     * Funkcja: Konstruktor klasy Shape
+     * @param w Wskaznik na sposob wyswietlania ksztaltu
+     * @return Brak
+     */
     Shape(Display* w);
 
-    // Wirtualny destruktor potrzebny przy dziedziczeniu 
+    /*
+     * Funkcja: Wirtualny destruktor klasy Shape.
+     * @param Brak
+     * @return Brak
+     */
     virtual ~Shape() = default;
 
-    // Metoda abstrakcyjna do rysowania ksztaltu 
+    /*
+     * Funkcja: Abstrakcyjna metoda rysujaca ksztalt
+     * @param Brak
+     * @return Brak
+     */ 
     virtual void draw() = 0;
 
-    // Zmienia sposob wyswietlania ksztaltu
+    /*
+     * Funkcja: Zmienia sposob wyswietlania ksztaltu
+     * @param newDisplay Nowy wskaznik na sposob wyswietlania
+     * @return Brak
+     */
     void changeDisplay(Display* newDisplay);
 };
 

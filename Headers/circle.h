@@ -3,17 +3,24 @@
 
 #include "shape.h"
 
+// Klasa reprezentujaca kolo
 class Circle: public Shape{
 private:
     int r;
-    //sprawdza czy promien kola jest poprawny
-    void validateRadius(int r) const;
-
 public:
-    // konstruktor ustwaiajacy sposob wyswietlania i promien kola 
+    /*
+     * Funkcja: konstruktor klasy Circle
+     * @param w wskaznik na sposob wyswietlania
+     * @param r promien kola
+     * @return Brak
+     */
     Circle(Display* w, int r);
 
-    //rysuje kolo za pomoca wybranego sposobu wyswietlania
+    /*
+     * Funkcja: rysuje kolo przy uzyciu aktualnego Display
+     * @param Brak
+     * @return Brak
+     */
     void draw() override;
 };
 
