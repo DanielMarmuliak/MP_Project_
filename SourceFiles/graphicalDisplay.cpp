@@ -29,7 +29,7 @@ double linearInterpolation(int x0, int y0, int x1, int y1, int yPos) {
 
 //funkcja wyznacza miejsca przecięć skanowanego wiersza (yPos) z krawędziami naszej figury
 void GraphicalDisplay::figureLimits(int x0, int y0, int x1, int y1, int yPos, std::vector<double>& limit) {
-    //Sytuacja w której wierzchołki znajdują się w pionowej linii
+    //Sytuacja w której wierzchołki znajdują się w poziomej linii
     if (y0==y1) {
         //Sytuacja w której skanowany wiersz dodatkowo jest taki sam jak y0
         if (yPos==y0) {
