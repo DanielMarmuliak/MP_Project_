@@ -27,7 +27,7 @@ double linearInterpolation(int x0, int y0, int x1, int y1, int yPos) {
     return x0 + static_cast<double>(yPos-y0)*(x1-x0)/(y1-y0);
 }
 
-//funkcja wyznacza miejsca przecięć skanowanego wiersza (yPos) z krawędziami naszej figury
+
 void GraphicalDisplay::figureLimits(int x0, int y0, int x1, int y1, int yPos, std::vector<double>& limit) {
     //Sytuacja w której wierzchołki znajdują się w poziomej linii
     if (y0==y1) {

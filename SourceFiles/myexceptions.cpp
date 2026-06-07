@@ -18,7 +18,7 @@ ShapeException::ShapeException(const std::string& message)
 
 void Validation::validateVectors(int a1, int a2, int b1, int b2){
  if(a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0)
-  throw ValidationException("In triangle a1, a2 and b1 must be positive, and b2 must be negative");
+  throw ValidationException("Invalid vector values. a1, a2 and b1 must be positive, and b2 must be negative");
 }
 
 void Validation::validateDisplay(Display* display){
